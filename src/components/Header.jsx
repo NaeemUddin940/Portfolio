@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <div>
       <header className="relative lg:flex lg:items-center lg: justify-center">
-        <nav className="flex p-3 justify-between lg:w-[80%]">
+        <nav className="flex p-3 items-center justify-between lg:w-[80%]">
           <div>
             <Link className="text-2xl font-bold" to="/">
               cyber
