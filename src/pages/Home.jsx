@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import image from "../assets/images/Iphone Image.png";
 import Phones from "../assets/images/Phones.png";
 import SmartWatches from "../assets/images/Smart Watches.png";
@@ -7,6 +7,8 @@ import Headphones from "../assets/images/Headphones.png";
 import Computers from "../assets/images/Computers.png";
 import Gaming from "../assets/images/Gaming.png";
 import CategoryCard from "../components/CategoryCard";
+import Footer from "../components/Footer";
+import ProductCardSetup from "../components/ProductCardSetup";
 
 const Home = () => {
   return (
@@ -34,7 +36,7 @@ const Home = () => {
       </div>
       <div className="bg-[#FAFAFA] py-10 px-3 flex flex-col items-center">
         <h3 className="pb-10 text-3xl">Browse By Category</h3>
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-5 ">
           <CategoryCard icon={Phones} title="Phone" />
           <CategoryCard icon={SmartWatches} title="Smart watches" />
           <CategoryCard icon={Cameras} title="Cameras" />
@@ -43,7 +45,8 @@ const Home = () => {
           <CategoryCard icon={Gaming} title="Gaming" />
         </div>
       </div>
-      
+      <ProductCardSetup />
+      <Footer />
     </>
   );
 };

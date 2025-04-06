@@ -30,3 +30,8 @@ ul li:hover {
   background-color: rgb(188, 186, 186);
   border-radius: 5px;
 }
+
+#footer p{
+  color: #CFCFCF;
+  font-size: .9rem;
+}
