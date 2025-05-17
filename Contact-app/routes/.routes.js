@@ -14,6 +14,6 @@ router.get("/show-contact", showContact);
 router.get("/edit-contact", editContact);
 router.get("/add-contact", addContact);
 router.post("/add-contact", postAddContact);
-router.get("/delete-contact", deleteContact);
+router.get("/delete-contact/:id", deleteContact);
 
 export default router;

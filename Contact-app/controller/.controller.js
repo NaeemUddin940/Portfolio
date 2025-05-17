@@ -33,7 +33,7 @@ export const editContact = (req, res) => {
 // Post edit contact route
 export const posteditContact = (req, res) => {};
 
-
 export const deleteContact = async (req, res) => {
-  await Contacts.findByIdAndDelete(req.params.id)
-}
+  await Contacts.findByIdAndDelete(req.params.id);
+  res.redirect("/");
+};
