@@ -1,12 +1,21 @@
-import express from 'express'
-const app = express()
+import express from "express";
+const app = express();
+import dotenv from "dotenv";
+import router from "./routes/.routes.js";
+dotenv.config();
 
 // env file import and use here
-import dotenv from 'dotenv'
-dotenv.config()
-const port = process.env.PORT
+const port = process.env.PORT || 8080;
 
+// Middleware
+app.set("view engine", "ejs");
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static("src"));
 
+//Router import from routes
+app.use(router);
+
+// server running
 app.listen(port, () => {
-    console.log(`Server is running on port: http://localhost:${port}`);
-})
+  console.log(`Server is running on port: http://localhost:${port}`);
+});
