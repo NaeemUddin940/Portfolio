@@ -1,8 +1,10 @@
 import express from "express";
 import {
-    addContact,
+  addContact,
+  deleteContact,
   editContact,
   homePage,
+  postAddContact,
   showContact,
 } from "../controller/.controller.js";
 const router = express.Router();
@@ -11,5 +13,7 @@ router.get("/", homePage);
 router.get("/show-contact", showContact);
 router.get("/edit-contact", editContact);
 router.get("/add-contact", addContact);
+router.post("/add-contact", postAddContact);
+router.get("/delete-contact", deleteContact);
 
 export default router;

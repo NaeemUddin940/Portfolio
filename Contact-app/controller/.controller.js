@@ -20,7 +20,10 @@ export const addContact = (req, res) => {
 };
 
 // Post Add contact page route setup
-export const postaddContact = (req, res) => {};
+export const postAddContact = async (req, res) => {
+  await Contacts.create(req.body);
+  res.redirect("/");
+};
 
 // Edit contact page setup
 export const editContact = (req, res) => {
@@ -29,3 +32,8 @@ export const editContact = (req, res) => {
 
 // Post edit contact route
 export const posteditContact = (req, res) => {};
+
+
+export const deleteContact = async (req, res) => {
+  await Contacts.findByIdAndDelete(req.params.id)
+}
