@@ -8,12 +8,9 @@ export const homePage = async (req, res) => {
 
 // Show Contact get route
 export const showContact = async (req, res) => {
-   const contacts = await Contacts.findById(req.params.id, req.body);
-  res.render("show-contact", {contacts});
+  const contacts = await Contacts.findById(req.params.id, req.body);
+  res.render("show-contact", { contacts });
 };
-
-// Post show contact route
-export const postShowContact = (req, res) => {};
 
 // Add contact page route setup
 export const addContact = (req, res) => {
@@ -27,8 +24,9 @@ export const postAddContact = async (req, res) => {
 };
 
 // Edit contact page setup
-export const editContact = (req, res) => {
-  res.render("edit-contact");
+export const editContact = async (req, res) => {
+  const contacts = await Contacts.findById(req.params.id);
+  res.render("edit-contact", {contacts});
 };
 
 // Post edit contact route
