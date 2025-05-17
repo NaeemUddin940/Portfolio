@@ -7,8 +7,9 @@ export const homePage = async (req, res) => {
 };
 
 // Show Contact get route
-export const showContact = (req, res) => {
-  res.render("show-contact");
+export const showContact = async (req, res) => {
+   const contacts = await Contacts.findById(req.params.id, req.body);
+  res.render("show-contact", {contacts});
 };
 
 // Post show contact route
