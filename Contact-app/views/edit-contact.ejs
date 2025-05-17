@@ -6,10 +6,7 @@
     class="w-full bg-gray-900 text-blue-500 px-6 py-5 flex justify-center text-4xl font-bold">
     Edit Contact
   </h1>
-  <form
-    class="max-w-md mx-auto px-2"
-    action="/edit-contact/<%= contacts._id %>"
-    method="POST">
+  <form class="max-w-md mx-auto px-2" action="/edit-contact" method="POST">
     <div class="mb-5 flex">
       <label
         for="first_name"
@@ -21,7 +18,7 @@
         name="first_name"
         id="first_name"
         class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
-        value="<%= contacts.first_name %>" />
+        value="" />
     </div>
     <div class="mb-5 flex">
       <label
@@ -34,7 +31,7 @@
         type="text"
         id="last_name"
         class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
-        value="<%= contacts.last_name %>" />
+        value="" />
     </div>
     <div class="mb-5 flex">
       <label
@@ -47,7 +44,7 @@
         type="text"
         id="text"
         class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
-        value="<%= contacts.phone %>" />
+        value="" />
     </div>
     <div class="mb-5 flex">
       <label
@@ -60,7 +57,7 @@
         type="email"
         id="email"
         class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
-        value="<%= contacts.email %>" />
+        value="" />
     </div>
     <div class="block items-start mb-5">
       <label
@@ -71,9 +68,7 @@
       <textarea
         class="shadow-xs max-h-20 min-h-20 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
         name="textarea"
-        id="textarea">
-<%= contacts.address %></textarea
-      >
+        id="textarea"></textarea>
     </div>
     <div class="space-x-2">
       <button

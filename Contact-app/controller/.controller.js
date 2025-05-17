@@ -9,3 +9,20 @@ export const homePage = (req, res) => {
 export const showContact = (req, res) => {
   res.render("show-contact");
 };
+
+
+// Post show contact route
+export const postShowContact = (req, res) => {
+  
+};
+
+// Edit contact page setup
+export const editContact = (req, res) => {
+  res.render("edit-contact");
+};
+
+
+// Post edit contact route
+export const posteditContact = (req, res) => {
+  
+};
