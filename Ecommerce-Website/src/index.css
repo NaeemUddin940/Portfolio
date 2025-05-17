@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root {
+  --btn-color: #000;
+  --category-color: #ededed;
+  --product-color: #f6f6f6;
+  --small-text-color: #909090;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+svg {
+  width: 35px;
+  padding: 0 7px;
+  cursor: pointer;
+}
+nav {
+  height: 60px;
+}
+
+ul li {
+  padding: 5px 10px;
+}
+ul li:hover {
+  background-color: #202e3a;
+  border-radius: 5px;
+}
+
+
+.banner {
+  background-image: url(./assets/images/product/BannerMobile.png);
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1000px) {
+  .banner {
+    background-image: url(./assets/images/product/Banner.png);
+    background-size: cover;
+    height: 20rem;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+  }
+}
