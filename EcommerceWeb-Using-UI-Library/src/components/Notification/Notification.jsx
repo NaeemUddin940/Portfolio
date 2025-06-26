@@ -3,7 +3,7 @@ import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 
 export default function Notification() {
   return (
-    <div className="bg-zinc-950 flex justify-center items-center gap-4 relative">
+    <div className="bg-zinc-800 flex justify-center items-center gap-4 relative">
       <div className="flex jcenter items-center gap-4">
         <ShinyText
           text="Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!"
